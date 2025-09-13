@@ -1,10 +1,7 @@
 :root {
   --primary: #8134af;
-  --purple-light: #d4b3e8;
   --grey-600: #6b7280;
-  --grey-500: #666666;
   --grey-400: #999999;
-  --grey-300: #d1d5db;
   --grey-200: #f2f2f2;
   --grey-100: #f8f9fa;
   --white: #ffffff;
@@ -18,9 +15,8 @@
   --radius-16: 16px;
   --radius-24: 24px;
   --radius-32: 32px;
-  --radius-46: 46px;
   
-  /* New gradient colors */
+  /* Gradient colors */
   --gradient-main: linear-gradient(135deg, #DD2A7B 0%, #9747FF 41%, #334CCA 100%);
   --gradient-bg: linear-gradient(135deg, rgba(221, 42, 123, 0.1) 0%, rgba(151, 71, 255, 0.1) 41%, rgba(51, 76, 202, 0.1) 100%);
   --gradient-bg-light: linear-gradient(135deg, rgba(221, 42, 123, 0.05) 0%, rgba(151, 71, 255, 0.05) 41%, rgba(51, 76, 202, 0.05) 100%);
@@ -580,13 +576,6 @@ body {
   margin-top: 0;
 }
 
-.chart-wrap canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  mix-blend-mode: multiply;
-}
-
 /* Desktop earnings and charts */
 @media (min-width: 768px) {
   .earnings,
@@ -617,10 +606,6 @@ body {
   
   .chart-section {
     grid-column: 1 / -1;
-  }
-  
-  .chart-wrap canvas {
-    height: 400px;
   }
 }
 
