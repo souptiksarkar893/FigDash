@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <div class="phone" role="region" aria-label="Dashboard">
+        <header class="header">
+          <h1 class="title">Dashboard</h1>
+          <div class="avatar" aria-hidden="true"></div>
+        </header>
+
+        <div class="content">
+          <section class="surface surface--hero">
+            <div class="hero-icon" aria-hidden="true">
+              <!-- Plus icon from assets -->
+              <img
+                src="./assets/Frame-1.svg"
+                alt="Plus icon"
+                width="64"
+                height="64"
+              />
+            </div>
+            <div class="hero-text">
+              <h2 class="h1">Create New Invoice</h2>
+              <p class="caption">Start by creating and sending new invoice</p>
+            </div>
+          </section>
+
+            <p class="upload-hint">
+              Or Upload an existing invoice and set payment reminder
+            </p>
+
+            <section class="card" aria-labelledby="tp-label">
+              <div class="card-inner">
+                <div class="row between">
+                  <div class="col">
+                    <span id="tp-label" class="label">Time Period</span>
+                  </div>
+                  <div class="col">
+                    <span class="caption">dd:mm:yyyy</span>
+                    <span class="label sep">-</span>
+                    <span class="caption">dd:mm:yyyy</span>
+                  </div>
+                </div>
+                <div class="chips">
+                  <button
+                    class="chip chip--ghost chip--selectable"
+                    data-range="1m"
+                    aria-pressed="false"
+                  >
+                    1Month
+                  </button>
+                  <button
+                    class="chip chip--outline chip--selectable is-active"
+                    data-range="3m"
+                    aria-pressed="true"
+                  >
+                    <span class="gradient-text">3Months</span>
+                  </button>
+                  <button
+                    class="chip chip--ghost chip--selectable"
+                    data-range="1y"
+                    aria-pressed="false"
+                  >
+                    1Year
+                    <img
+                      src="./assets/Vector-2.svg"
+                      alt="Crown"
+                      width="18"
+                      height="16"
+                      class="chev"
+                    />
+                  </button>
+                  <button
+                    class="chip chip--ghost chip--selectable"
+                    data-range="custom"
+                    aria-pressed="false"
+                  >
+                    <img
+                      src="./assets/Frame-3.svg"
+                      alt="Calendar"
+                      width="16"
+                      height="16"
+                    />
+                    <span>Custom</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="row gap earnings">
+              <div class="card grow">
+                <div class="card-inner">
+                  <div class="label">Total Earnings</div>
+                  <div class="h2 purple">$1,25,000</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="row gap pay-status">
+              <div class="card">
+                <div class="card-inner">
+                  <div class="label">Payment Awaited</div>
+                  <div class="h3 purple">$25,000</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-inner">
+                  <div class="label">Payment Overdue</div>
+                  <div class="h3 purple">$25,000</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="card chart-section" aria-labelledby="income-label">
+              <div class="card-inner">
+                <div class="label" id="income-label">Income Trend</div>
+                <p class="para">
+                  Your monthly income and growth for the last 6 months.
+                </p>
+                <div class="chart-wrap">
+                  <img
+                    src="./assets/Income Trend Chart.png"
+                    alt="Income trend chart"
+                    style="width: 100%; height: auto; display: block"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section class="list">
+              <div class="list-head">
+                <div class="h3 grey">Your Invoices</div>
+                <button class="icon-btn" aria-label="Invoices dropdown">
+                  <img
+                    src="./assets/Frame-2.svg"
+                    alt="Dropdown"
+                    width="16"
+                    height="16"
+                  />
+                </button>
+              </div>
+
+              <!-- Items -->
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Client Name</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <button class="chip chip--primary">
+                  Update Status
+                  <img
+                    src="./assets/Vector-1.svg"
+                    alt="Dropdown"
+                    width="10"
+                    height="6"
+                    class="chev"
+                  />
+                </button>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Client Name</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--neutral">Unpaid</div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--danger">Disputed</div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--success">Paid</div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--success">Paid</div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--warn">Partially Paid</div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--success">Paid</div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="right">
+                  <div class="chip chip--danger">Overdue</div>
+                  <button class="icon-btn" aria-label="View details">
+                    <img
+                      src="./assets/Vector.svg"
+                      alt="Notification"
+                      width="15"
+                      height="20"
+                    />
+                  </button>
+                </div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="right">
+                  <div class="chip chip--await">Awaited</div>
+                  <button class="icon-btn" aria-label="View details">
+                    <img
+                      src="./assets/Vector.svg"
+                      alt="Notification"
+                      width="15"
+                      height="20"
+                    />
+                  </button>
+                </div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="right">
+                  <div class="chip chip--neutral">Draft</div>
+                  <button class="icon-btn" aria-label="Edit draft">
+                    <img
+                      src="./assets/Frame.svg"
+                      alt="Edit"
+                      width="16"
+                      height="16"
+                    />
+                  </button>
+                </div>
+              </article>
+
+              <article class="item">
+                <div class="meta">
+                  <div class="label grey">Income Trend</div>
+                  <div class="caption">₹1,25,000, Due: 2024-06-15</div>
+                </div>
+                <div class="chip chip--success">Paid</div>
+              </article>
+            </section>
+
+          <footer class="footer">
+            <hr />
+            <div class="brand">
+              <img
+                src="./assets/logo.svg"
+                alt="sparko"
+                width="77"
+                height="14"
+              />
+              <div class="caption">sparking the creator economy</div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
